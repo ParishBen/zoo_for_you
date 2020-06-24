@@ -13,3 +13,5 @@ gem "uri", "~> 0.10.0"
 gem "json", "~> 2.3"
 
 gem "httparty", "~> 0.18.1"
+
+gem "pry", "~> 0.13.1"

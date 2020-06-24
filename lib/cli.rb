@@ -1,3 +1,6 @@
+require_relative "./zoo_for_you/version"
+require_relative "./environment"
+
 class ZooForYou::CLI
 
 def start
@@ -6,9 +9,9 @@ def start
     main_loop
 end
 
-def introduction
+def self.introduction
     puts "\n\n"
-    puts "Welcome to the ZooView!\n We're going to get you all the fine details of th eZoo that interests you."
+    puts "Welcome to the ZooView!\nWe're going to get you all the fine details of the Zoo that interests you."
     puts "\n\n"
 end
 
@@ -22,7 +25,7 @@ end
 def main_loop
     loop do 
         menu
-        input= zoo_choice
+        input= zoo_numeric_choice
     end
     "in loop"
 end
@@ -31,17 +34,9 @@ def menu
     display_zoo_list
     display_instructoins
 end
-
-def zoo_choice
-    input = gets.strip.downcase
-    return input if input == "exit"
-    if input.to_i.between?(1, ZooForYou::Zoo.all.length)
-    else puts "Sorry, please choose a Zoo between 1 and #{ZooForYou::Zoo.all.length}"
-        
-    end
 end
 
-end
+ZooForYou::CLI.introduction
 
 
 
