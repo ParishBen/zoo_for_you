@@ -1,6 +1,6 @@
 require 'pry'
 
-class ZooForYou::Zoo
+class Zoo
     @@all=[]
 attr_accessor :name, :details, :address 
 
@@ -11,8 +11,6 @@ attr_accessor :name, :details, :address
     
     def self.all
         @@all
-        
-       
     end
 
     def save
@@ -34,4 +32,3 @@ attr_accessor :name, :details, :address
         DES
      end
 end
-puts Zoo.all

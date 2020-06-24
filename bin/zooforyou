@@ -1,8 +1,12 @@
 #!/usr/bin/env ruby
 
-require_relative "../lib/environment"
+require_relative '../lib/environment'
 
-ZooForYou::CLI.new.start      #uncomment later
+#ZooForYou::CLI.new.start      #uncomment later
 #binding.pry
 
+#Scraper.new.get_zoos
+ZooForYou::Zoo.all
+
+puts "Zoo-All: #{Zoo.all}"
 
